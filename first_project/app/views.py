@@ -31,7 +31,5 @@ def time_view(request):
 
 
 def workdir_view(request):
-    # по аналогии с `time_view`, напишите код,
-    # который возвращает список файлов в рабочей 
-    # директорииpython manage
-    raise NotImplemented
+    listdir = os.listdir('.')
+    return HttpResponse(listdir)
